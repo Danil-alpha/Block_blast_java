@@ -11,8 +11,7 @@ public class ScoreEngine {
 
     public void addPointsForLines(int linesCount) {
         if (linesCount <= 0) return;
-        int bonus = (linesCount * (linesCount + 1)) * 5;
-        currentScore += bonus;
+        currentScore += (linesCount * (linesCount + 1)) * 5;
         updateHighScore();
     }
 
@@ -22,15 +21,7 @@ public class ScoreEngine {
         }
     }
 
-    public void reset() {
-        currentScore = 0;
-    }
-
-    public int getCurrentScore() {
-        return currentScore;
-    }
-
-    public int getHighScore() {
-        return highScore;
-    }
+    public void reset() { currentScore = 0; }
+    public int getCurrentScore() { return currentScore; }
+    public int getHighScore() { return highScore; }
 }
